@@ -13,6 +13,10 @@ Who's behind it?
 - [@michaelw90](http://twitter.com/michaelw90) - Coding
 - [@panda_doodle](http://twitter.com/panda_doodle) - Idea &amp; design.
 
+Fork...
+===============
+- This is a forked version - tweaking the styles...
+
 FAQs
 ====
 ![new](http://u.wimg.co.uk/new.png) **Q. Can I make it so that the prompt box hides when the user accepts cookies on the site?**<br />

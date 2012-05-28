@@ -74,31 +74,35 @@
 		.fork a:hover {
 			text-decoration: underline;
 		}
+/* cookie_box styles */		
+.cookie_box {
+	text-align:center;
+	padding:6px 10px 7px;
+	font:11px sans-serif;
+	color:#333;
+	border-color:#ddd;
+  filter: alpha(opacity=70); opacity: 0.7;
+}
+.cookie_box a {
+	color:#180def;
+}
+input#cPrompt_check {
+	margin-top:-2px;
+}
+.cookie_box_close {
+	float:right;
+	font:bold 1em Monaco,monospaced;
+	cursor:pointer;
+	color:#666;
+}
 	</style>
-	<script type="text/javascript">
-
-	  var _gaq = _gaq || [];
-	  _gaq.push(['_setAccount', 'UA-29511072-1']);
-	  _gaq.push(['_trackPageview']);
-
-	  (function() {
-	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	  })();
-
-	</script>
 	<meta charset="utf-8">
 	<title>Simple EU Cookie Law Permission Prompt - Michael Wright</title>
-	<script src='./src/cprompt.min.js'>
-	/**
-		Simple Cookie Prompt
-		Idea: @panda_doodle - Coded: @michaelw90
-	**/
-	</script>
+	<script src='cprompt.js'></script>
 	<script>
-		cPrompt.cookieLink = 'http://michaelwright.me/cookies';
-		cPrompt.minimisePrompt = true;
+		cPrompt.cookieLink = 'http://www.spiffin.net/cookies';
+  		cPrompt.hideOnAccept = true;
+  		cPrompt.minimisePrompt = false;
 	</script>
 </head>
 <body>
@@ -123,13 +127,13 @@
 	</div>
 	<ol start='0'>There are 4 possible returned values:
 		<li>The user has actively opted out of all cookies on the site. <em>Shows the red notification.</em></li>
-		<li>The user has seen a warning about cookies, but neither accepted nor declined, this is classed as inferred acception. <em>Shows the blue notification</em></li> 
+		<li>The user has seen a warning about cookies, but neither accepted nor declined, this is classed as inferred acception. <em>Shows the blue notification</em></li>
 		<li>The user has accepted all cookies to the site. <em>Shows the green notification.</em></li>
 		<li> The user's first visit to the site, no cookies accepted or declined. <em>Shows the yellow notifcation</em></li>
 	</ol>
 
 	<p>
-		You should only store/use cookies if the above returns either <strong>1</strong> or <strong>2</strong>. 
+		You should only store/use cookies if the above returns either <strong>1</strong> or <strong>2</strong>.
 	</p>
 
 	<p>
@@ -161,10 +165,7 @@ if(cPrompt.allowCookies()){
 	<p style='float: left;' class='footer'>
 		Handcrafted by <a href='http://twitter.com/michaelw90'>@michaelw90</a> &amp; dreamt up by <a href='http://twitter.com/panda_doole'>@panda_doodle</a>
 	</p>
-	<div style='float: right; margin: 10px;'>
-	<a href="https://twitter.com/share" data-url="http://michaelwright.me/cPrompt" data-text="A simple, and effective cookie opt in system for the new EU Cookie law" class="twitter-share-button" data-via="michaelw90" data-lang="en" data-related="michaelw90">Tweet</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-      </div>
+
     <p class='subfooter'>
     	Before using this script please ensure that it covers all of your site's requisites in terms of law compliance. I don't accept any responsibility if you get fined, eaten, attacked or bitten by the ICO or anyone else (including bears).
     </p>
