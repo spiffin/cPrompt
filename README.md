@@ -3,19 +3,21 @@ cPrompt
 
 Starting on May 26th 2011 sites for any organisation based within the UK (even if their site is hosted overseas) must seek consent to store cookies on a user's computer, or device. Failure to comply could result in a fine up to &pound;500,000.
 
+Fork...
+===============
+This is a forked version with background images removed and small style changes. Note you need the 'added styles' block of CSS  from the index.html file.
+
 Demo
 =====
 
-A live demo can be seen [here](http://michaelwright.me/cPrompt), with some extra implementation information.
+A live demo of the original can be seen [here](http://michaelwright.me/cPrompt), with some extra implementation information.
+
+.. and a live demo of the fork is [here](http://www.spiffin.net).
 
 Who's behind it?
 ===============
 - [@michaelw90](http://twitter.com/michaelw90) - Coding
 - [@panda_doodle](http://twitter.com/panda_doodle) - Idea &amp; design.
-
-Fork...
-===============
-- This is a forked version - tweaking the styles...
 
 FAQs
 ====
