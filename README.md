@@ -3,9 +3,9 @@ cPrompt
 
 Starting on May 26th 2011 sites for any organisation based within the UK (even if their site is hosted overseas) must seek consent to store cookies on a user's computer, or device. Failure to comply could result in a fine up to &pound;500,000.
 
-Fork...
+Spiffin fork...
 ===============
-This is a forked version with background images removed and small style changes. Note you need the 'added styles' block of CSS  from the index.html file.
+This is a forked version with background images removed and small style changes. Note you need the 'added styles' block of CSS from the index.html file - or the cprompt.css stylesheet.
 
 Demo
 =====
