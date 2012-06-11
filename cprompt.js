@@ -3,31 +3,24 @@
 	Idea: @panda_doodle - Coded: @michaelw90
 	[forked & tweaked by Spiffin]
 **/
+
 var cPrompt = {
-
 	cookie: false,
-
 	n: 3,
-
 	hideOnAccept: false,
-
 	minimisePrompt: false,
-
 	cookieLink: '',
-
 	prompts: [],
-
 	p: null,
-
 	init: function(){
 		this.prompts = [
-			['background:#fecbcb;', "Opting out or refusing to accept cookies may cause this website to function incorrectly. <label for='cPrompt_check'>To accept cookies please tick this box.</label> &nbsp;<input type='checkbox' id='cPrompt_check' onclick='cPrompt.doClick(1);'>"],
+            ['background:#fecbcb;', "Not accepting cookies may cause this website to function incorrectly. <label for='cPrompt_check'>To accept cookies please tick this box.</label> &nbsp;<input type='checkbox' id='cPrompt_check' onclick='cPrompt.doClick(1);'>"],
 
-			['background:#e4e3ff;', "Some of the cookies we store are essential to make our site work and have already been set. " + (this.cookieLink != ''? "You can find out how and why we use cookies in our <a href='" + this.cookieLink + "'>cookie policy</a>." : '') + " <label for='cPrompt_check'>To accept cookies please tick this box.</label> &nbsp;<input type='checkbox' id='cPrompt_check' onclick='cPrompt.doClick(1);'>"],
+            ['background:#e4e3ff;', "Some cookies we store are essential to make our site work and have already been set. " + (this.cookieLink != ''? "You can find out how we use cookies in our <a href='" + this.cookieLink + "'>cookie policy</a>." : '') + " <label for='cPrompt_check'>Please accept our cookies by ticking this box.</label> &nbsp;<input type='checkbox' id='cPrompt_check' onclick='cPrompt.doClick(1);'>"],
 
-			['background:#ffffe0;', "Thank you. Cookies have been accepted. You can opt out of this at any time by <a href='javascript: void(0);' onclick='cPrompt.doClick(0);'>clicking here</a>."],
+			['background:#ffffe0;', "Thanks for accepting our cookies. You can opt out of this at any time by <a href='javascript: void(0);' onclick='cPrompt.doClick(0);'>clicking here</a>."],
 
-			['background:#f8f8f8;', "This site uses cookies to store information on your computer. " + (this.cookieLink != ''? "To find out how we use them please <a href='" + this.cookieLink + "'>click here</a>." : '') + " &nbsp;<input type='checkbox' onclick='cPrompt.doClick(1);' id='cPrompt_check'>  &nbsp;<label for='cPrompt_check'>I accept cookies from this site.</label>"]
+			['background:#f8f8f8;', "This site uses cookies. " + (this.cookieLink != ''? "To find out how we use them please <a href='" + this.cookieLink + "'>click here</a>." : '') + " &nbsp;<input type='checkbox' onclick='cPrompt.doClick(1);' id='cPrompt_check'>  &nbsp;<label for='cPrompt_check'>I accept cookies from this site.</label>"]
 		];
 		var cookie = this.checkCookie();
 
@@ -66,7 +59,7 @@ var cPrompt = {
 			this.n = n;
 			var h = document.createElement('div');
 			with(h){
-              style.cssText = 'border:1px solid #ddd;' + this.prompts[n][0];
+              style.cssText = 'border:none;' + this.prompts[n][0];
               innerHTML = this.prompts[n][1] + "<a class=cookie_box_close onclick=cPrompt.hidePrompt(event)>x</a>";
 				className = 'cookie_box';
 				id = 'cookie_prompt_' + n;
@@ -87,7 +80,7 @@ var cPrompt = {
 		}
 		var h = this.p;
 		with(h){
-          style.cssText = this.prompts[this.n][0] + 'width:0; padding:10px; border:1px solid #ddd; cursor:pointer;';
+          style.cssText = this.prompts[this.n][0] + 'width:0;padding:13px;border:none;cursor:pointer;';
 			innerHTML = '';
 			h.onclick = function(){
 				cPrompt.reshow();
@@ -98,7 +91,7 @@ var cPrompt = {
 
 	reshow: function(){
 		with(this.p){
-          style.cssText = 'border:1px solid #ddd;' + this.prompts[this.n][0];
+          style.cssText = 'border:none;' + this.prompts[this.n][0];
           innerHTML = this.prompts[this.n][1] + "<a class=cookie_box_close onclick=cPrompt.hidePrompt(event)>x</a>";
 		}
 	},
